@@ -1,7 +1,2 @@
-node_modules
 .next
-.DS_Store
-yarn-error.log
-dist
-examples
-packages
+node_modules

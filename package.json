@@ -1,27 +1,31 @@
 {
-  "name": "nextra",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "Don't Get ZOHO'D",
+  "version": "0.0.1",
+  "description": "ZOHO Tips and Tricks",
   "scripts": {
-    "dev": "next",
-    "start": "next start",
-    "build": "next build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "author": "Shu Ding",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+  },
+  "author": "Nick MacKenzie",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shuding/nextra-docs-template/issues"
+  },
+  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
   "dependencies": {
-    "next": "^13.4.1",
-    "nextra": "^2.5.0",
-    "nextra-theme-docs": "^2.5.0",
-    "react": "^18.3.0-next-fecc288b7-20221025",
-    "react-dom": "^18.3.0-next-fecc288b7-20221025"
+    "next": "^13.0.6",
+    "nextra": "latest",
+    "nextra-theme-docs": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
+    "@types/node": "18.11.10",
+    "typescript": "^4.9.3"
   }
 }
