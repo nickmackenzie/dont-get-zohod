@@ -1,3 +1,13 @@
 {
-  "index": "Introduction"
+  "index": "About",
+  "line-1": {
+    "type": "separator"
+  },
+  "Deluge": "Deluge",
+  "Sites": "Sites",
+  "line-2": {
+    "type": "separator"
+  },
+  "Resources": "Resources",
+  "Contribution-Template":"Contribution-Template"
 }

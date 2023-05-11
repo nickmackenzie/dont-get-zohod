@@ -2,13 +2,12 @@
 
 Loop through the record id list that is passed in and then grab the full record based on the ID.
 
-Replace 'Input Variable' with the variable name containing the list of id's
-
-```javascript
-IdsList = '<Input Variable>'.toList("|||"); /* This will be the parameter you give the function */
+```
+IdsList = input.id.toList("|||"); /* This will be the parameter you give the function */
 for each recId in IdsList
 {
 /* Put Logic In here */
 }
 return "Success";
+
 ```
