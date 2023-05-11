@@ -26,9 +26,9 @@ Add the following class into the css editor in sites and apply the class name to
 Add the following script to the page footer
 
 ```javascript
-var parapraphs = document.querySelectorAll(".line-clamp");
-for (let index = 0; index < parapraphs.length; index++) {
-  const p = parapraphs[index];
+var paragraphs = document.querySelectorAll(".line-clamp");
+for (let index = 0; index < paragraphs.length; index++) {
+  const p = paragraphs[index];
   p.setAttribute("id", `para-${index}`);
   p.setAttribute("data-expanded", true);
   var button = document.createElement("label");
