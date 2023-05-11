@@ -1,6 +1,6 @@
 # Add Support For Show More/Less
 
-This adds the ability to flag a paragraph as content that should be collapsible and adds a show more/less toggle text.
+Adds the ability to flag a paragraph as content that should be collapsible and adds a show more/less toggle text.
 
 ## How This Works
 
