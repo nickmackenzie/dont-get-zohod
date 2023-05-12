@@ -1,23 +1,8 @@
-# Nextra Docs Template 
+# Don't Get Zohod 🚫
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+Welcome to the **Don't Get Zohod** repository, where we embrace the "joys" of working with ZOHO!
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+ 
+## Contributing
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
-
-## Quick Start
-
-Click the button to clone this repository and deploy it on Vercel:
-
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
-
-## Local Development
-
-First, run `pnpm i` to install the dependencies.
-
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
-
-## License
-
-This project is licensed under the MIT License.
+We invite you to join us on this exciting ZOHO journey! Share your insights, contribute your favorite code snippets, and help us build a community. To get started, simply fork this repository, make your contributions with a positive twist, and submit a pull request. Let's collaborate and make the ZOHO experience a little nicer to work with.
