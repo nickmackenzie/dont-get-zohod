@@ -1,5 +1,5 @@
 # Format time From Deluge Time to CRM Time
-# # Use Cases
+## Use Cases
 
 You might need to format your date from a api source or CSV, and need to import into a ZOHO app.
 
