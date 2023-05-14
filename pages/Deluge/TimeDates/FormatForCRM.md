@@ -3,7 +3,7 @@
 
 You might need to format your date from a api source or CSV, and need to import into a ZOHO app.
 
-# # Javascript
+## Javascript
 ``` javascript
 dateTime = now;
 dateTime_DATE = dateTime.getPrefix(" ").toString("yyyy-MM-dd");
@@ -12,7 +12,7 @@ dateTime_FORMATTED = dateTime_DATE + "T" + dateTime_TIME;
 
 ```
 
-# # Supported Formats
+## Supported Formats
 
     Please note to select this format in CRM 
 
