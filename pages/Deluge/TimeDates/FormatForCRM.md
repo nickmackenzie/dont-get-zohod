@@ -1,5 +1,9 @@
 # Format time From Deluge Time to CRM Time
+# # Use Cases
 
+You might need to format your date from a api source or CSV, and need to import into a ZOHO app.
+
+# # Javascript
 ``` javascript
 dateTime = now;
 dateTime_DATE = dateTime.getPrefix(" ").toString("yyyy-MM-dd");
@@ -8,7 +12,9 @@ dateTime_FORMATTED = dateTime_DATE + "T" + dateTime_TIME;
 
 ```
 
-Supported Formats. Please note to select this format in CRM 
+# # Supported Formats
+
+    Please note to select this format in CRM 
 
 | **Format**      | **Result**          |
 |-----------------|---------------------|
