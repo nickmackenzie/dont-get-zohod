@@ -15,7 +15,7 @@ const config: DocsThemeConfig = {
 
   useNextSeoProps() {
     return {
-      titleTemplate: '%s - Dont\'t Get Zoho\'d'
+      titleTemplate: '%s - Don\'t Get Zoho\'d'
     }
   }
 
