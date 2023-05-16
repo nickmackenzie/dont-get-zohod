@@ -8,6 +8,17 @@ const config: DocsThemeConfig = {
   },
 
   docsRepositoryBase: 'https://github.com/nickmackenzie/dont-get-zohod',
+
+  editLink: {
+    component: () => null,
+  },
+
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s - Dont\'t Get Zoho\'d'
+    }
+  }
+
 }
 
 export default config
