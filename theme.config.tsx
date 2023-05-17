@@ -7,11 +7,11 @@ const config: DocsThemeConfig = {
     link: 'https://github.com/nickmackenzie/dont-get-zohod',
   },
 
-  docsRepositoryBase: 'https://github.com/nickmackenzie/dont-get-zohod',
+  docsRepositoryBase: 'https://github.com/nickmackenzie/dont-get-zohod/blob/main',
 
-  editLink: {
-    component: () => null,
-  },
+  // editLink: {
+  //   component: () => null,
+  // },
 
   useNextSeoProps() {
     return {
