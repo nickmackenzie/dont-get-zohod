@@ -9,7 +9,7 @@ If You have font files start from step 1, In case you have font url then skip st
   directory also).
 - Once you've uploaded the font
 
-##Step 2:
+## Step 2:
 
 - Go to Settings and click Custom CSS Editor.
 - Paste the code given below and replace the name of the font and url. Code is
