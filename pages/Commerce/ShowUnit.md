@@ -11,11 +11,10 @@ Please add the code into the store footer by going to Site Settings > Header and
 ## Code
 
 ```javascript
-
 <script type="application/javascript">
 
 function appendUnitWithPrice(product,attribute){
-	var price_array = product.querySelectorAll("["+attribute+"]");
+	const price_array = product.querySelectorAll("["+attribute+"]");
 	price_array.forEach(function(price){
 		if(typeof(window.zs_product.unit) != "undefined" && window.zs_product.unit != ""){
 			price.innerText += " /" + window.zs_product.unit + " ";
@@ -24,7 +23,7 @@ function appendUnitWithPrice(product,attribute){
 }
 
 function displayUnitInProductDetailsPage(){
-	var product = document.querySelector("[data-zs-product-id]");
+	const product = document.querySelector("[data-zs-product-id]");
     appendUnitWithPrice(product,"data-zs-selling-price");
 	appendUnitWithPrice(product,"data-zs-label-price");
 }
@@ -37,8 +36,6 @@ function productPageOnLoad() {
 window.addEventListener("load", productPageOnLoad);
 
 </script>
-
-
 ```
 
 
