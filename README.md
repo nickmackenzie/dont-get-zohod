@@ -9,4 +9,4 @@ We invite you to join us on this exciting ZOHO journey! Share your insights, con
 
 ## License
 
-This project is open-source and released under the [MIT License](https://duckduckgo.com](https://mit-license.org/). Feel free to contribute to the project by forking the repository, making your enhancements, and submitting a pull request. By contributing, you agree to license your contributions under the terms of the MIT License.
+This project is open-source and released under the [MIT License](https://mit-license.org/). Feel free to contribute to the project by forking the repository, making your enhancements, and submitting a pull request. By contributing, you agree to license your contributions under the terms of the MIT License.
