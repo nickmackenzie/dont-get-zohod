@@ -1,0 +1,47 @@
+# Setting up Catalyst and NextJS
+
+1. Start by initializing a catalyst project with a basic web app client and server using the Catalyst CLI.
+
+2. Once the project is initialized, navigate to the client folder and run the command ``npx create-next-app app`` to create a Next.js application.
+
+3. After the application is created, open the package.json file located in the app folder. Modify the commands in the scripts key as shown below:
+
+```json
+"scripts": {
+  "dev": "next dev",
+  "build": "next build && next export",
+  "start": "next start",
+  "lint": "next lint"
+}
+```
+
+4. Next, navigate to the next.config.js file in the app folder and update it with the following content:
+
+```javascript
+const isProd = process.env.NODE_ENV === "production";
+
+module.exports = {
+  assetPrefix: isProd ? "/app/" : "",
+  rewrites: () => {
+    return [
+      {
+        source: "/app/server/:path*",
+        destination: "/server/:path*",
+      },
+    ];
+  },
+};
+```
+
+5. Once the next.config.js file is updated, open the catalyst.json file in the root of your project folder. Add the following values to the client key:
+
+```json
+"scripts": {
+  "packageJson": "cd client && cp client-package.json app/out/",
+  "build": "cd client/app && npm install && npm run build",
+  "preserve": "catalyst run client:build && catalyst run client:packageJson",
+  "predeploy": "catalyst run client:build && catalyst run client:packageJson"
+}
+```
+
+After completing these steps, you should have successfully initialized a client in Next.js.
