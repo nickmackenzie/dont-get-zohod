@@ -1,3 +1,8 @@
+---
+title: Show Unit on Commerce Website
+description: Learn how to display the unit based on the selected unit in Zoho Inventory for products on your commerce website.
+---
+
 # Show Unit on Commerce Website
 
 The unit displayed will be based on the unit selected in the Zoho Inventory for products.

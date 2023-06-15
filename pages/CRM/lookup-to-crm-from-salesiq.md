@@ -1,3 +1,8 @@
+---
+title: Lookup to CRM From SalesIQ
+description: Learn how to extend the features of a Zoho SalesIQ codeless chatbot by adding custom code.
+---
+
 # Lookup to CRM From SalesIQ
 
 Here, I used Zoho SalesIQ to build a simple codeless chatbot. I wanted to extend it features slightly with some custom code. 

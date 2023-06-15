@@ -1,3 +1,11 @@
+---
+title: Adding Contributions through Markdown Files
+description: Learn how to contribute to Markdown files by adding content and code snippets.
+
+---
+
+# Adding Contributions through Markdown Files
+
 Contributions are added through .MD or .MDX files. 
 
 Spaces in file names need to have a hyphen. Example: test-one.md

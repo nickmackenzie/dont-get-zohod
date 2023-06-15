@@ -1,3 +1,7 @@
+---
+title: Setting up Catalyst and NextJS
+description: Learn how to initialize a Catalyst project with a basic web app client and server using the Catalyst CLI, and set up a Next.js application.
+---
 # Setting up Catalyst and NextJS
 
 1. Start by initializing a catalyst project with a basic web app client and server using the Catalyst CLI.

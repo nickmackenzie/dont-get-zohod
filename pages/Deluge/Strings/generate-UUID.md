@@ -1,3 +1,7 @@
+---
+title: Generate a UUID-esque in Deluge
+description: Learn how to generate a UUID-esque string in Deluge.
+---
 # Generate a UUID\* in Deluge
 
 This script lets you generate a UUID-_esque_ string. It is not truly unique as all numbers are random from a static range.

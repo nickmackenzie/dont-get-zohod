@@ -1,3 +1,7 @@
+---
+title: Copy Attachments Between CRM Modules
+description: Learn how to copy record attachments between two CRM modules using code. This example demonstrates copying attachments from the Accounts module to the Contacts module.
+---
 # Copy Attachments Between CRM Modules
 
 How to copy record attachments between two CRM modules. In this example, we will copy from the Accounts module and move attachments to the Contacts module. 

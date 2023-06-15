@@ -1,3 +1,7 @@
+---
+title: Filter List of Objects
+description: Learn how to filter a list of objects against another list of objects, grouping similar objects and non-similar objects.
+---
 # Filter List of Objects
 
 Filters a list list of objects against another list of objects grouping similar objects and non similar objects.

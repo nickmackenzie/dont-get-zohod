@@ -1,3 +1,9 @@
+---
+title: Push CRM Record Images/Files to External Server
+description: Learn how to push CRM record images and files to an external server on button click or workflow rule.
+---
+
+
 # Push CRM Record Images/Files to External Server
 
 How to push CRM record images and files to an external server on button click or workflow rule.
