@@ -1,4 +1,8 @@
-# How to add a custom font in Zoho Sites/Commerce?
+---
+title: Custom fonts in ZOHO Sites
+description: Add a custom font in Zoho Sites/Commerce
+---
+# How to add a custom font in Zoho Sites/Commerce
 
 If You have font files start from step 1, In case you have font url then skip step 1.
 

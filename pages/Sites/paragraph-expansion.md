@@ -1,3 +1,8 @@
+---
+title: Add Support For Show More/Less in ZOHO Sites
+description: Adds the ability to flag a paragraph as content that should be collapsible and adds a show more/less toggle text.
+---
+
 # Add Support For Show More/Less
 
 Adds the ability to flag a paragraph as content that should be collapsible and adds a show more/less toggle text.

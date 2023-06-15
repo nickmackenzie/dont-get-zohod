@@ -1,3 +1,8 @@
+---
+title: List Blog Posts on Any Page
+description: List your latest blog posts on any ZOHO sites page.
+---
+
 # List Blog Posts on Any Page
 
 Create a code snippet in the area you want to display the blog posts

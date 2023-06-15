@@ -1,3 +1,7 @@
+---
+title: Custom 404 Page On ZOHO Sites
+description: Add custom 404 page to your website in Zoho Sites
+---
 # Custom 404 Page On ZOHO Sites
 
 To add custom 404 page to your website in Zoho Sites, go to Page > Add Page > Add page title as 404.
