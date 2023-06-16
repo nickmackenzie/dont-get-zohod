@@ -1,5 +1,5 @@
 ---
-title:Format time From Deluge Time to CRM Time
+title: Format time From Deluge Time to CRM Time
 description: Format dates into different formats with examples/templates.
 ---
 # Format time From Deluge Time to CRM Time
