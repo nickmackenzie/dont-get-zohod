@@ -1,0 +1,58 @@
+---
+title: Zoho Cliq Integration for CRM Alerts
+description: This script demonstrates how to integrate Zoho Cliq with Zoho CRM to send real-time alerts to a specified Cliq channel.
+---
+
+
+# Zoho Cliq Integration for CRM Alerts
+
+## Description
+This script demonstrates how to integrate Zoho Cliq with Zoho CRM to send real-time alerts to a specified Cliq channel when certain events occur in CRM. By leveraging this integration, you can improve collaboration and keep your team informed about important CRM activities directly in Cliq.
+
+```javascript
+// Trigger: On After Create (or any relevant trigger)
+
+// Define the details for the Cliq integration
+cliqAuthToken = "YOUR_CLIQ_AUTH_TOKEN"; // Update with your Cliq authentication token
+cliqChannel = "CHANNEL_NAME"; // Update with the name of your Cliq channel
+alertMessage = "A new lead has been created in CRM.";
+
+// Get the record details
+leadRecord = zoho.crm.getRecordById("Leads", input.recordId);
+leadName = leadRecord.get("First Name") + " " + leadRecord.get("Last Name");
+
+// Prepare the payload for Cliq message
+cliqPayload = {"channel": cliqChannel, "text": alertMessage + "\nLead Name: " + leadName};
+
+// Send the Cliq message
+response = invokeurl
+    [url :"https://cliq.zoho.com/api/v2/channels/message"]
+    [headers:{"Authorization":"Bearer " + cliqAuthToken}]
+    [type:POST]
+    [parameters:cliqPayload];
+
+// Log the response for debugging
+info response;
+```
+
+## Usage Instructions:
+
+Replace `"YOUR_CLIQ_AUTH_TOKEN"` with your Zoho Cliq authentication token. You can generate an auth token in Cliq by following the instructions in the Zoho Cliq API documentation.  
+
+Update `"CHANNEL_NAME"` with the name of the Cliq channel where you want to send the alerts. 
+
+Customize the alertMessage variable to match your desired notification content.
+
+ 1. Modify the **leadRecord.get("First Name") and leadRecord.get("Last
+    Name")** fields to match the field names in your Leads module.
+        
+ 2. Save the script and associate it with the relevant trigger, such as
+        "On After Create" or any other trigger that suits your alert
+        requirements.
+        
+ 3. When a new lead is created, the script will send a message to the
+        specified Cliq channel with the alert message and lead details.  
+
+> Note: Make sure you have the necessary permissions and authentication
+> set up in Cliq to send messages to channels using the API.
+

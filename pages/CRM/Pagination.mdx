@@ -1,0 +1,87 @@
+---
+title: Pagination in CRM
+description: A simple technique to handle pagination from ZOHO CRM API
+---
+
+
+
+import { Tab, Tabs } from 'nextra-theme-docs'
+ 
+<Tabs items={['Zoho Deluge', 'JavaScript (Node.js)']}>
+  <Tab>
+``` javascript
+organizationID = organization.get("organization_id");
+uniqueInvoiceIDs = List();
+pageNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+for each pageNumber in pageNumbers {
+    invoicesResponse = invokeurl [
+        url: "https://books.zoho.com/api/v3/invoices",
+        type: GET,
+        parameters: {
+            "page": pageNumber,
+            "per_page": 200,
+            "organization_id": organizationID
+        },
+        connection: "zbooks"
+    ];
+
+    invoices = invoicesResponse.get("invoices");
+    for each invoice in invoices {
+        invoiceID = invoice.get("invoice_id");
+        if (uniqueInvoiceIDs.notcontains(invoiceID)) {
+            uniqueInvoiceIDs.add(invoiceID);
+        }
+    }
+}
+
+info uniqueInvoiceIDs;
+```
+  </Tab>
+  <Tab>
+``` javascript
+import axios from 'axios';
+
+async function fetchRecords(page) {
+  const authToken = 'YOUR_AUTH_TOKEN'; // Replace with your Zoho CRM auth token
+  const moduleAPIName = 'Leads'; // Replace with the desired module API name
+  const perPage = 200; // Number of records per page
+
+  const url = `https://www.zohoapis.com/crm/v2/${moduleAPIName}?page=${page}&per_page=${perPage}`;
+
+  const config = {
+    headers: {
+      'Authorization': `Zoho-oauthtoken ${authToken}`
+    }
+  };
+
+  try {
+    const response = await axios.get(url, config);
+    const data = response.data;
+
+    // Check if the request was successful
+    if (response.status === 200 && data && data.data) {
+      const records = data.data;
+      console.log(`Page ${page} - Fetched ${records.length} records:`);
+      console.log(records);
+
+      // Check if there are more pages to fetch
+      if (data.info.more_records) {
+        const nextPage = page + 1;
+        await fetchRecords(nextPage); // Recursively fetch the next page
+      }
+    } else {
+      console.error(`Failed to fetch records from page ${page}. Response status: ${response.status}`);
+    }
+  } catch (error) {
+    console.error('Error fetching records:', error.response ? error.response.data : error.message);
+  }
+}
+
+// Start fetching records from page 1
+fetchRecords(1);
+``` 
+  </Tab>
+
+</Tabs>
+

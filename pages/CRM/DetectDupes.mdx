@@ -1,0 +1,37 @@
+---
+title: Duplicate Record Detection in ZOHO CRM
+description: The Duplicate Detection script helps identify and prevent the creation of duplicate records in your Zoho CRM.
+---
+
+# Duplicate Record Detection
+
+## Description
+The Duplicate Detection script helps identify and prevent the creation of duplicate records in your Zoho CRM. It compares the data entered in new records with existing records based on specific fields (such as email address or phone number) to ensure data integrity and avoid redundancy. By implementing this script, you can maintain a clean and reliable CRM database, improve efficiency, and prevent confusion caused by duplicate entries.
+
+
+```javascript
+// Define the module and fields to check for duplicates
+moduleName = "Leads";
+fieldsToCheck = {"Email", "Phone"};
+
+// Get the current record's field values
+currentRecord = zoho.crm.getRecordById(moduleName, input.recordId);
+currentValues = fieldsToCheck.collect(field => currentRecord.get(field));
+
+// Search for existing records with the same field values
+duplicateRecords = zoho.crm.searchRecords(moduleName, join(", ", fieldsToCheck.collect(field => field + ":equals:" + currentRecord.get(field))));
+
+// If duplicates are found, prevent the creation of the new record
+if (duplicateRecords.size() > 0) {
+    info "Duplicate records found. Please check for existing entries.";
+    return false;
+}
+```
+
+**Usage Instructions:**
+1. Replace `"Leads"` with the appropriate module name (e.g., `"Contacts"` or `"Accounts"`) in the `moduleName` variable.
+2. Update the `fieldsToCheck` set with the field names you want to use for duplicate detection (e.g., `{"Email", "Phone"}`).
+3. Save the script and ensure it is associated with the "On Before Record Create" trigger for the desired module.
+4. Test the script by creating a new record with duplicate field values. The script will display the information message and prevent the creation of the duplicate record.
+
+Note: Customize the script further to suit your specific requirements, such as including additional fields for duplicate checks or modifying the error message.
