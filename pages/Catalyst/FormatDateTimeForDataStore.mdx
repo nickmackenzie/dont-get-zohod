@@ -1,0 +1,6 @@
+---
+title: Format DateTime For DataStore
+description: Catalyst requires a certain format for DateTime data type in Datastore.
+---
+
+```new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')```
