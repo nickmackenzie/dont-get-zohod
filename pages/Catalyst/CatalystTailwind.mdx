@@ -1,31 +1,33 @@
-cd into your react directory
-```
+---
+title: Installing Tailwind CSS in Zoho Catalyst
+description: Learn how to install and configure Tailwind CSS in a Zoho Catalyst project.
+---
+
+```shell
+# Navigate to your React directory
+cd path/to/your/react/directory
+
+# Install Tailwind CSS as a development dependency
 npm install -D tailwindcss
-```
-```
+
+# Initialize Tailwind CSS configuration
 npx tailwindcss init
-```
-**tailwind.config.js**
 
-    /** @type {import('tailwindcss').Config} */
-    module.exports = {
-      content: [
-        "./src/**/*.{js,jsx,ts,tsx}",
-      ],
-      theme: {
-        extend: {},
-      },
-      plugins: [],
-    }
+tailwind.config.js
 
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
 
-**index.css**
+index.css
 
-  ```
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-```
-
-
-
