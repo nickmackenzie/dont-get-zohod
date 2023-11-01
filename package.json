@@ -20,8 +20,8 @@
   "dependencies": {
     "@types/react": "^18.2.33",
     "next": "^14.0.1-canary.5",
-    "nextra": "^3.0.0-alpha.10",
-    "nextra-theme-docs": "^3.0.0-alpha.10",
+    "nextra": "^2.13.2",
+    "nextra-theme-docs": "^2.13.2",
     "react": "^18.3.0-next-fecc288b7-20221025",
     "react-dom": "^18.3.0-next-fecc288b7-20221025"
   },
