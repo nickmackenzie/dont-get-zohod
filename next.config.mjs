@@ -6,9 +6,7 @@ const withNextra = nextra({
   staticImage: true,
   latex: true,
   defaultShowCopyCode: true,
-  flexsearch: {
-    codeblock: false,
-  },
+
 });
 
 export default withNextra({
