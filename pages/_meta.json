@@ -1,16 +1,23 @@
 {
-  "index": "About",
-  "line-1": {
+  "index": {
+    "title": "Introduction"
+  },
+  "---": {
     "type": "separator"
   },
   "Deluge": "Deluge",
+  "-- Apps": {
+    "type": "separator",
+    "title": "Apps"
+  },
   "Catalyst": "Catalyst",
+  "Commerce": "Commerce",
+  "Creator": "Creator",
   "CRM": "CRM",
-  "Commerce":"Commerce",
+  "Desk": "Desk",
   "Sites": "Sites",
-  "line-2": {
+  "-- Resources": {
     "type": "separator"
   },
   "Resources": "Resources"
-  
 }
