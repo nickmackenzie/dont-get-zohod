@@ -1,6 +1,6 @@
 {
   "name": "Don't Get ZOHO'D",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ZOHO Tips and Tricks",
   "scripts": {
     "dev": "next dev",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+    "url": "git+https://github.com/nickmackenzie/dont-get-zohod.git"
   },
   "author": "Nick MacKenzie",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
+    "url": "https://github.com/nickmackenzie/dont-get-zohod/issues"
   },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "https://github.com/nickmackenzie/dont-get-zohod/#readme",
   "dependencies": {
     "@types/react": "^18.2.33",
     "@vercel/analytics": "^1.1.1",
