@@ -9,6 +9,10 @@ const config: DocsThemeConfig = {
 
   docsRepositoryBase: 'https://github.com/nickmackenzie/dont-get-zohod/blob/main',
 
+  sidebar: {
+    defaultMenuCollapseLevel: 1
+  },
+
   // editLink: {
   //   component: () => null,
   // },
