@@ -1,9 +1,67 @@
+import { Cards, Card } from "nextra/components";
+import {
+  CatalystIcon,
+  CrmIcon,
+  CommerceIcon,
+  CreatorIcon,
+  DeskIcon,
+  DelugeIcon,
+  SitesIcon,
+} from "../components/zoho-icons";
 
 # Don't Get Zohod 🚫
 
 Welcome to the **Don't Get Zohod** repository, where we embrace the "joys" of working with ZOHO!
 
- 
-## Contributing
+This is a community driven repository for Zoho developers to share tips & tricks as well as scripts they've learned and created over the years.
 
-We invite you to join us on this exciting ZOHO journey! Share your insights, contribute your favorite code snippets, and help us build a community. To get started, simply fork this repository, make your contributions with a positive twist, and submit a pull request. Let's collaborate and make the ZOHO experience a little nicer to work with.
+### Generic Scripts
+
+Some scripts aren't app specific. Check out the Deluge section for generic Deluge scripts.
+
+<Cards>
+  <Card
+    icon={<DelugeIcon />}
+    title="Deluge"
+    href=""
+    onClick={(e) => e.preventDefault()}
+  />
+</Cards>
+
+### Apps
+
+<Cards>
+  <Card
+    icon={<CatalystIcon />}
+    title="Catalyst"
+    href=""
+    onClick={(e) => e.preventDefault()}
+  />
+  <Card
+    icon={<CommerceIcon />}
+    title="Commerce"
+    href=""
+    onClick={(e) => e.preventDefault()}
+  />
+  <Card
+    icon={<CreatorIcon />}
+    title="Creator"
+    href=""
+    onClick={(e) => e.preventDefault()}
+  />
+  <Card icon={<CrmIcon />} title="CRM" href="/CRM" />
+  <Card
+    icon={<DeskIcon />}
+    title="Desk"
+    href=""
+    onClick={(e) => e.preventDefault()}
+  />
+  <Card
+    icon={<SitesIcon />}
+    title="Sites"
+    href=""
+    onClick={(e) => e.preventDefault()}
+  />
+</Cards>
+
+### Resources & Tools
