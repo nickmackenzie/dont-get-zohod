@@ -1,5 +1,5 @@
 {
-  "UploadImagesExternally": "Upload Images Externally",
-  "CopyAttachmentsBetweenModules": "Copy Attachments Between Modules",
-  "lookup-to-crm-from-salesiq": "Lookup To CRM From SalesIQ"
+  "index": {
+    "display": "hidden"
+  }
 }
