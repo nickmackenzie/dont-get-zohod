@@ -1,151 +1,85 @@
 import styles from "./zoho-icons.module.css";
 
-export const TestIcon = () => {
-  return (
-    <span
-      className={styles.zicon}
-      style={{ backgroundPosition: "-360px -40px" }}
-    />
-  );
+const IconBase = (props) => {
+  return <span className={styles.zicon} style={{ ...props.style }} />;
 };
 
-export const AssistIcon = () => {
-  return (
-    <span className={styles.zicon} style={{ backgroundPosition: "-720px 0" }} />
-  );
+export const TestIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-360px -40px" }} />;
 };
 
-export const BooksIcon = () => {
-  return (
-    <span className={styles.zicon} style={{ backgroundPosition: "0 -40px" }} />
-  );
+export const AssistIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-720px 0" }} />;
 };
 
-export const CampaignsIcon = () => {
-  return (
-    <span className={styles.zicon} style={{ backgroundPosition: "-440px 0" }} />
-  );
+export const BooksIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "0 -40px" }} />;
 };
 
-export const CatalystIcon = () => {
-  return (
-    <span
-      className={styles.zicon}
-      style={{ backgroundPosition: "-400px -80px" }}
-    />
-  );
+export const CampaignsIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-440px 0" }} />;
 };
 
-export const CommerceIcon = () => {
-  return (
-    <span
-      className={styles.zicon}
-      style={{ backgroundPosition: "-280px -80px" }}
-    />
-  );
+export const CatalystIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-400px -80px" }} />;
 };
 
-export const CrmIcon = () => {
-  return (
-    <span className={styles.zicon} style={{ backgroundPosition: "-320px 0" }} />
-  );
+export const CommerceIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-280px -80px" }} />;
 };
 
-export const CreatorIcon = () => {
-  return (
-    <span
-      className={styles.zicon}
-      style={{ backgroundPosition: "-720px -40px" }}
-    />
-  );
+export const CrmIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-320px 0" }} />;
 };
 
-export const DelugeIcon = () => {
-  return (
-    <span
-      className={styles.zicon}
-      style={{ backgroundPosition: "-720px -120px" }}
-    />
-  );
+export const CreatorIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-720px -40px" }} />;
 };
 
-export const DeskIcon = () => {
-  return (
-    <span className={styles.zicon} style={{ backgroundPosition: "-680px 0" }} />
-  );
+export const DelugeIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-720px -120px" }} />;
 };
 
-export const FormsIcon = () => {
-  return (
-    <span className={styles.zicon} style={{ backgroundPosition: "-560px 0" }} />
-  );
+export const DeskIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-680px 0" }} />;
 };
 
-export const IventoryIcon = () => {
-  return (
-    <span
-      className={styles.zicon}
-      style={{ backgroundPosition: "-40px -40px" }}
-    />
-  );
+export const FormsIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-560px 0" }} />;
 };
 
-export const InvoiceIcon = () => {
-  return (
-    <span
-      className={styles.zicon}
-      style={{ backgroundPosition: "-160px -40px" }}
-    />
-  );
+export const InventoryIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-40px -40px" }} />;
 };
 
-export const MailIcon = () => {
-  return (
-    <span
-      className={styles.zicon}
-      style={{ backgroundPosition: "-360px -40px" }}
-    />
-  );
+export const InvoiceIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-160px -40px" }} />;
 };
 
-export const MeetingsIcon = () => {
-  return (
-    <span className={styles.zicon} style={{ backgroundPosition: "-760px 0" }} />
-  );
+export const MailIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-360px -40px" }} />;
 };
 
-export const PeopleIcon = () => {
-  return (
-    <span
-      className={styles.zicon}
-      style={{ backgroundPosition: "-280px -40px" }}
-    />
-  );
+export const MeetingsIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-760px 0" }} />;
 };
 
-export const RecruitIcon = () => {
-  return (
-    <span
-      className={styles.zicon}
-      style={{ backgroundPosition: "-240px -40px" }}
-    />
-  );
+export const PeopleIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-280px -40px" }} />;
 };
 
-export const SalesIqIcon = () => {
-  return (
-    <span className={styles.zicon} style={{ backgroundPosition: "-360px 0" }} />
-  );
+export const RecruitIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-240px -40px" }} />;
 };
 
-export const SignIcon = () => {
-  return (
-    <span className={styles.zicon} style={{ backgroundPosition: "-640px 0" }} />
-  );
+export const SalesIqIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-360px 0" }} />;
 };
 
-export const SitesIcon = () => {
-  return (
-    <span className={styles.zicon} style={{ backgroundPosition: "-600px 0" }} />
-  );
+export const SignIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-640px 0" }} />;
+};
+
+export const SitesIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-600px 0" }} />;
 };
