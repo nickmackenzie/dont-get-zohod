@@ -1,47 +1,63 @@
-name: Verify Naming Convention
+name: Validate File and Folder Names
 
 on:
+  pull_request:
   push:
-    paths:
-      - "**/*" # Trigger the workflow on any file or folder change
+    branches:
+      - main
 
 jobs:
-  verifyNaming:
+  validate:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Verify names
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate file and folder names
         run: |
-          # Get a list of all files and folders in the pages directory
-          pages_items=$(git ls-files pages/**/* && git ls-tree -d --name-only -r HEAD pages)
+          #!/bin/bash
+          set -e
 
-          # Initialize an array to store incorrect items
-          incorrect_items=()
+          # Function to check if a string is in camelCase
+          function is_camel_case {
+            [[ $1 =~ ^[a-z]+([A-Z][a-z0-9]+)*$ ]]
+          }
 
-          # Iterate through the files and folders and check their names
-          for item in $pages_items; do
-            # Check if the item is a file or a folder and does not start with an underscore
-            if [[ (-f $item || -d $item) && $item != pages/**/_* ]]; then
-              # Get the base name of the file or folder (without extension)
-              base_name=$(basename "$item")
+          # Validate file and folder names
+          validation_failed=false
+          validation_results=""
 
-              # Check if the base name is in camel case
-              if ! [[ $base_name =~ ^[a-z]+([A-Z][a-z0-9]+)*$ ]]; then
-                incorrect_items+=("$item")
+          for file in ./pages/*; do
+            if [[ $file != ./pages/_* ]]; then
+              if [[ -f $file ]]; then
+                filename=$(basename "$file")
+                if ! is_camel_case "${filename%.*}"; then
+                  validation_failed=true
+                  validation_results+="File $file name $filename is not in camelCase\n"
+                fi
+              elif [[ -d $file ]]; then
+                dirname=$(basename "$file")
+                if ! is_camel_case "$dirname"; then
+                  validation_failed=true
+                  validation_results+="Folder $file name $dirname is not in camelCase\n"
+                fi
               fi
             fi
           done
 
-          # Check if there are any incorrect items
-          if [[ ${#incorrect_items[@]} -gt 0 ]]; then
-            # Output the list of incorrect items
-            echo "The following items have invalid names (camel case required):"
-            for item in "${incorrect_items[@]}"; do
-              echo "- $item"
-            done
+          # Print validation results
+          if [ "$validation_failed" = true ]; then
+            echo -e "Validation failed:\n$validation_results"
             exit 1
           else
-            echo "All items in the pages directory have valid names."
+            echo "All file and folder names in ./pages (excluding those starting with '_') are in camelCase"
           fi
