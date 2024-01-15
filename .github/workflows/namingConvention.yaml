@@ -1,0 +1,47 @@
+name: Verify Naming Convention
+
+on:
+  push:
+    paths:
+      - "**/*" # Trigger the workflow on any file or folder change
+
+jobs:
+  verifyNaming:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Verify names
+        run: |
+          # Get a list of all files and folders in the pages directory
+          pages_items=$(git ls-files pages/**/* && git ls-tree -d --name-only -r HEAD pages)
+
+          # Initialize an array to store incorrect items
+          incorrect_items=()
+
+          # Iterate through the files and folders and check their names
+          for item in $pages_items; do
+            # Check if the item is a file or a folder and does not start with an underscore
+            if [[ (-f $item || -d $item) && $item != pages/**/_* ]]; then
+              # Get the base name of the file or folder (without extension)
+              base_name=$(basename "$item")
+
+              # Check if the base name is in camel case
+              if ! [[ $base_name =~ ^[a-z]+([A-Z][a-z0-9]+)*$ ]]; then
+                incorrect_items+=("$item")
+              fi
+            fi
+          done
+
+          # Check if there are any incorrect items
+          if [[ ${#incorrect_items[@]} -gt 0 ]]; then
+            # Output the list of incorrect items
+            echo "The following items have invalid names (camel case required):"
+            for item in "${incorrect_items[@]}"; do
+              echo "- $item"
+            done
+            exit 1
+          else
+            echo "All items in the pages directory have valid names."
+          fi
