@@ -34,6 +34,8 @@ export const DocumentCards = (props) => {
       key={index}
       title={doc.title}
       href={doc.path.replace(/(pages\/)/, '').replace(/.[^\/\.]+$/, '')}
+      icon={<></>}
+      children={<></>}
     />
   ))
 
