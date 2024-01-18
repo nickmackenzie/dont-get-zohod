@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://dont-get-zohod.vercel.app</loc><lastmod>2024-01-18T19:31:02.981Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/catalyst</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/catalyst/catalystTailwind</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/catalyst/formatDateTimeForDataStore</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/catalyst/nextJsSetup</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/commerce/showUnit</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/contributing</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/creator/updateUrlField</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/crm</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/crm/billingToShipping</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/crm/copyAttachmentsBetweenModules</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/crm/detectDupes</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/crm/getRecordsCustomView</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/crm/lookupToCrmFromSalesiq</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/crm/newCliqMsgFromCRM</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/crm/pagination</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/crm/uploadImagesExternally</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/deluge/buttons/multipleRecords</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/deluge/lists/filterListOfObjects</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/deluge/strings/generateUuid</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/deluge/timeDates/formatForCRM</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/desk/searchWithCustomField</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/resources/contributionTemplate</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/resources/links</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/resources/markdownCheatsheet</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/sites/custom404</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/sites/customFonts</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/sites/listBlogPosts</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://dont-get-zohod.vercel.app/sites/paragraphExpansion</loc><lastmod>2024-01-18T19:31:02.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dont-get-zohod.vercel.app/
+
+# Sitemaps
+Sitemap: https://dont-get-zohod.vercel.app/sitemap.xml
