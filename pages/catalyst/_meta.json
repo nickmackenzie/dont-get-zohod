@@ -2,6 +2,6 @@
   "index": {
     "display": "hidden"
   },
-  "NextJS-Setup": "Catalyst and NextJS Setup",
-  "FormatDateTimeForDataStore": "Format DateTime For DataStore (NodeJS)"
+  "nextJsSetup": "Catalyst and NextJS Setup",
+  "formatDateTimeForDataStore": "Format DateTime For DataStore (NodeJS)"
 }
