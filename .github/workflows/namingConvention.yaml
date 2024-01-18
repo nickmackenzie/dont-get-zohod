@@ -1,0 +1,63 @@
+name: Validate File and Folder Names
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate file and folder names
+        run: |
+          #!/bin/bash
+          set -e
+
+          # Function to check if a string is in camelCase
+          function is_camel_case {
+            [[ $1 =~ ^[a-z]+([A-Z][a-z0-9]+)*$ ]]
+          }
+
+          # Validate file and folder names
+          validation_failed=false
+          validation_results=""
+
+          for file in ./pages/*; do
+            if [[ $file != ./pages/_* ]]; then
+              if [[ -f $file ]]; then
+                filename=$(basename "$file")
+                if ! is_camel_case "${filename%.*}"; then
+                  validation_failed=true
+                  validation_results+="File $file name $filename is not in camelCase\n"
+                fi
+              elif [[ -d $file ]]; then
+                dirname=$(basename "$file")
+                if ! is_camel_case "$dirname"; then
+                  validation_failed=true
+                  validation_results+="Folder $file name $dirname is not in camelCase\n"
+                fi
+              fi
+            fi
+          done
+
+          # Print validation results
+          if [ "$validation_failed" = true ]; then
+            echo -e "Validation failed:\n$validation_results"
+            exit 1
+          else
+            echo "All file and folder names in ./pages (excluding those starting with '_') are in camelCase"
+          fi
