@@ -2,23 +2,23 @@
   "index": {
     "title": "Introduction"
   },
-  "Contributing": "Contributing",
+  "contributing": "Contributing",
   "---": {
     "type": "separator"
   },
-  "Deluge": "Deluge",
+  "deluge": "Deluge",
   "-- Apps": {
     "type": "separator",
     "title": "Apps"
   },
-  "Catalyst": "Catalyst",
-  "Commerce": "Commerce",
-  "Creator": "Creator",
-  "CRM": "CRM",
-  "Desk": "Desk",
-  "Sites": "Sites",
+  "catalyst": "Catalyst",
+  "commerce": "Commerce",
+  "creator": "Creator",
+  "crm": "CRM",
+  "desk": "Desk",
+  "sites": "Sites",
   "-- Resources": {
     "type": "separator"
   },
-  "Resources": "Resources"
+  "resources": "Resources"
 }

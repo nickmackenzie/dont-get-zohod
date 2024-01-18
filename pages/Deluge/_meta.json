@@ -1,3 +1,6 @@
-{  
-  "TimeDates":"Time & Dates"
+{
+  "buttons": "Buttons",
+  "lists": "Lists",
+  "strings": "Strings",
+  "timeDates": "Time & Dates"
 }
