@@ -1,4 +1,4 @@
-import styles from "./zoho-icons.module.css";
+import styles from "./zohoIcons.module.css";
 
 const IconBase = (props) => {
   return <span className={styles.zicon} style={{ ...props.style }} />;
