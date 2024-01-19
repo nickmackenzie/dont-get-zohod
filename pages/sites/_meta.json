@@ -1,6 +1,9 @@
 {
-    "custom404": "Custom 404 Page",
-    "customFonts": "Custom Fonts",
-    "listBlogPosts": "List Blog Posts on Any Page",
-    "paragraphExpansion": "Paragraph Expansion (Show More/Less)"
+  "index": {
+    "display": "hidden"
+  },
+  "custom404": "Custom 404 Page",
+  "customFonts": "Custom Fonts",
+  "listBlogPosts": "List Blog Posts on Any Page",
+  "paragraphExpansion": "Paragraph Expansion (Show More/Less)"
 }
