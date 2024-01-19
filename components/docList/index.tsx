@@ -1,12 +1,54 @@
 import { Cards, Card } from "nextra/components";
 import { useEffect, useState } from "react";
 
-export const RawDocuments = async (folder) => {
-  return await fetch(`https://api.github.com/repos/nickmackenzie/dont-get-zohod/contents/pages/${folder}`)
-    .then(response => response.json())
-    .catch(error => {
-      console.error('Error fetching file list:', error);
-    });
+type GithubFile = {
+  name: string,
+  path: string,
+  sha: string,
+  size: number,
+  url: string,
+  html_url: string,
+  git_url: string,
+  download_url: string,
+  type: string,
+  _links: {
+    self: string,
+    git: string,
+    html: string
+  }
+}
+
+
+
+export async function RawDocuments(folder: string | undefined, returnDocs?: GithubFile[]): Promise<GithubFile[]>;
+export async function RawDocuments(url: string | undefined, returnDocs?: GithubFile[]): Promise<GithubFile[]>;
+export async function RawDocuments(a: string | undefined, returnDocs?: GithubFile[]): Promise<GithubFile[]> {
+  if (!returnDocs) returnDocs = []
+
+  let fetchURL = `https://api.github.com/repos/nickmackenzie/dont-get-zohod/contents/pages/${a}`;
+  if (isUrl(a)) {
+    fetchURL = a;
+  }
+
+  try {
+    const response = await fetch(fetchURL);
+    const data = await response.json();
+
+    for (const item of data) {
+      if (item.type === "dir") {
+        // Recursively fetch documents for directories
+        returnDocs = await RawDocuments(item.url, returnDocs);
+      } else {
+        // Add documents to the result array for files
+        returnDocs.push(item);
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching file list:', error);
+  }
+
+  return returnDocs;
+
 }
 
 export const DocumentCards = (props) => {
@@ -16,8 +58,12 @@ export const DocumentCards = (props) => {
     const func = async () => {
       const docList = []
       const documents = await RawDocuments(props.folder)
-      for (const document of documents.filter(doc => doc.name.includes(".md"))) {
-        const metadata = await FetchContent(document.git_url);
+      if (Object.keys(documents).includes("message")) return
+      for (const document of documents.filter(doc => { return doc.name.includes(".md") && !doc.name.includes("index") })) {
+        let metadata = await FetchContent(document.git_url);
+        if (typeof metadata == 'undefined') {
+          metadata = { title: document.name.replace(/.[^\/\.]+$/, '') }
+        }
         docList.push({ ...document, ...metadata })
       }
       setDocuments(docList);
@@ -75,3 +121,13 @@ const extractMetadataFromMarkdown = (markdown) => {
 
   return metadataObject;
 };
+
+const isUrl = (urlString: string) => {
+  var urlPattern = new RegExp('^(https?:\\/\\/)?' + // validate protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // validate domain name
+    '((\\d{1,3}\\.){3}\\d{1,3}))' + // validate OR ip (v4) address
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // validate port and path
+    '(\\?[;&a-z\\d%_.~+=-]*)?' + // validate query string
+    '(\\#[-a-z\\d_]*)?$', 'i'); // validate fragment locator
+  return !!urlPattern.test(urlString);
+}

@@ -1,3 +1,6 @@
-{  
-  "showUnit":"Show Unit on Website"
+{
+  "index": {
+    "display": "hidden"
+  },
+  "showUnit": "Show Unit on Website"
 }
