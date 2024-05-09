@@ -2,5 +2,8 @@
   "buttons": "Buttons",
   "lists": "Lists",
   "strings": "Strings",
-  "timeDates": "Time & Dates"
+  "timeDates": "Time & Dates",
+  "index": {
+    "display": "hidden"
+  }
 }
