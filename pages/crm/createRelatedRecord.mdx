@@ -1,0 +1,38 @@
+---
+title: Create records related to existing records in Zoho CRM.
+description: Explanation on how to create a record that has a relationship with another, in cases of relationships between Leads, Accounts and Deals.
+---
+# Create records related to existing records in Zoho CRM.
+
+When we need to create a related record, such as an Event for a Lead in Zoho CRM (or even a Task or Call), 
+it is necessary to follow certain standards that will be described in the comments. 
+This specific procedure will be applicable to records related to Leads, Accounts, and Deals.
+In this example, a function is executed triggered by a workflow, where the mapping of arguments is defined to identify the specific Lead.
+
+```javascript
+//mapping of arguments: leadId = Leads.ID Lead
+
+lead = zoho.crm.getRecordById("Leads",leadId);
+startDate = zoho.currenttime.toString("yyyy-MM-dd'T'HH:mm:ss'-03:00'");;
+endDate = startDate.addHour(1).toString("yyyy-MM-dd'T'HH:mm:ss'-03:00'"); //using Brasilia, Brazil time zone
+
+mp = Map();
+mp.put("Event_Title","Alignment meeting");
+mp.put("Owner",ifnull(contato.get("Owner"),"").get("id"));
+mp.put("What_Id",leadId);
+mp.put("$se_module","Leads");
+//The $se_module function represents the relationship between modules in these cases.
+//For the relationship with the Contacts module, it is not necessary to use the $se_module function. 
+//However, it is necessary to change the API from What_Id to Who_Id.
+mp.put("Start_DateTime",startDate);
+mp.put("End_DateTime",endDate);
+mp.put("Event_Status","Scheduled");
+mp.put("Type_of_Event","Relationship");
+create = zoho.crm.createRecord("Events",mp);
+info create;
+
+//When the function is executed, the "info" should provide the key information about the newly created Event record.
+```
+
+Contributor: Emanuele Bittencourt
+emanuelebittencourt3@gmail.com
