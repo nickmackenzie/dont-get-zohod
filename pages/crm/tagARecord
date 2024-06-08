@@ -1,0 +1,53 @@
+---
+title: Tag a record in Zoho CRM. Or remove a tag.
+description: Explanation of how to insert or remove a Tag in a Zoho CRM record using a deluge script.
+---
+# Tag a Record
+
+To insert or remove a tag using a Deluge script, you need to create a connection that allows you to perform this action via an API call.
+
+To create a connection, you can follow these steps:
+
+1. In Zoho CRM, go to Settings > Connections > Create a New Connection.
+2. Select the service: Zoho OAuth.
+3. Select the scope: ZohoCRM.modules.ALL.
+4. Create the connection and activate it.
+5. Copy the sample code provided.
+
+In this example, a script was created for an action in a workflow for the Leads module.
+
+```javascript
+//mapping of arguments: leadId = Leads - ID Leads
+
+lead = zoho.crm.getRecordById("Leads",leadId);
+
+//How to remove a Tag
+tag = "Cold";
+mp = Map();
+mp.put("tag_names",tag);
+response = invokeurl
+[
+    url: "https://www.zohoapis.com/crm/v2/Contacts/" + leadId + "/actions/remove_tags?"
+    type: POST
+    parameters: mp
+    connection:"xxxxxxx" //connection name
+];
+
+info "Response delete tag : " + response;
+
+//How to insert a Tag
+tag = "Hot";
+mp = Map();
+mp.put("tag_names",tag);
+response = invokeurl
+[
+	url: "https://www.zohoapis.com/crm/v2/Contacts/" + leadId + "/actions/add_tags?"
+	type: POST
+	parameters: mp
+	connection: "xxxxxxx" //connection name
+];
+info "Response delete tag : " + response;
+```
+
+Contributor: Emanuele Bittencourt
+emanuelebittencourt3@gmail.com
