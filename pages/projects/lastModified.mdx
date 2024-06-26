@@ -1,0 +1,43 @@
+---
+title: Capture Last Modified Time in Zoho Projects
+description: Learn how to create a custom function in Zoho Projects to capture the last modified time of a task.
+---
+
+# Capture Last Modified Time in Zoho Projects With a Custom Field
+
+## Function
+
+```javascript
+// TODO: Please create a connection for the Zoho Projects service with the scopes "ZohoProjects.tasks.ALL"
+// Replace '*********' with the connection name. Click the link below to learn how to create the connection.
+
+
+timeZone = "Asia/Calcutta";
+
+taskdetails = invokeurl
+[
+    url :"https://projectsapi.zoho.com/restapi/portal/" + portalId + "/projects/" + projectId + "/tasks/" + taskId + "/"
+    type :get
+    connection:"*********"
+];
+
+modifiedtime = taskdetails.get("tasks").get(0).get("last_updated_time_format");
+
+formatted_date = toString(toDateTime(modifiedtime, "MM-dd-yyyy hh:mm:ss a"), "MM-dd-YYYY HH:mm:ss");
+
+data = Map();
+custom_fields = Map();
+
+custom_fields.put("UDF_DATE13", formatted_date);
+data.put("custom_fields", custom_fields);
+
+response = invokeurl
+[
+    url :"https://projectsapi.zoho.com/restapi/portal/" + portalId + "/projects/" + projectId + "/tasks/" + taskId + "/"
+    type :post
+    parameters: data
+    connection:"*********"
+];
+
+info response;
+return "success";
