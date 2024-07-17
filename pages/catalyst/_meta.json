@@ -3,5 +3,6 @@
     "display": "hidden"
   },
   "nextJsSetup": "Catalyst and NextJS Setup",
-  "formatDateTimeForDataStore": "Format DateTime For DataStore (NodeJS)"
+  "formatDateTimeForDataStore": "Format DateTime For DataStore (NodeJS)",
+  "githubActionDelpoy": "Deploy Via GitHub Actions"
 }
