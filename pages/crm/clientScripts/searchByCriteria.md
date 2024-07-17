@@ -3,7 +3,11 @@ title: Search By Criteria
 description: Search for records with a specific criteria using a client script.
 ---
 
-# Client Script:
+# Search By Criteria
+
+Search for records with a specific criteria using a client script and loop through the results.
+
+## Client Script:
 
 ```javascript
 var leadsResult = ZDK.Apps.CRM.Leads.searchByCriteria(
