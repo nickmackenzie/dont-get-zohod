@@ -1,0 +1,15 @@
+Solution for the 
+"Email can't be sent using this from address.Kindly check the allowed from address list"
+error:
+
+If you're getting that error, try this:
+
+In the data map that you are sending to the ".../actions/send_mail" url, include:
+dataMap = map();
+dataMap.put("org_email", true);
+dataMap.put("from":{"user_name":"John Doe", "email":"senderEmail@mydomain.com"});
+// ...
+dataMap.put("subject", ...);
+dataMap.put("template", ...);
+
+As long as your 'from' address is set up in CRM Channels>Emails>Organization Emails, and you include the key-value pairs I mentioned above, then this should resolve the error.
