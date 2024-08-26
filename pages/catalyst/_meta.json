@@ -4,5 +4,6 @@
   },
   "nextJsSetup": "Catalyst and NextJS Setup",
   "formatDateTimeForDataStore": "Format DateTime For DataStore (NodeJS)",
-  "githubActionDelpoy": "Deploy Via GitHub Actions"
+  "githubActionDelpoy": "Deploy Via GitHub Actions",
+  "configureEnvVariables": "Environment Variables"
 }
