@@ -1,5 +1,6 @@
 {
   "index": {
     "display": "hidden"
-  }
+  },
+  "updateUrlField": "Update URL Field"
 }
