@@ -5,5 +5,7 @@
   "nextJsSetup": "Catalyst and NextJS Setup",
   "formatDateTimeForDataStore": "Format DateTime For DataStore (NodeJS)",
   "githubActionDelpoy": "Deploy Via GitHub Actions",
-  "configureEnvVariables": "Environment Variables"
+  "configureEnvVariables": "Environment Variables",
+  "devopsPipeline": "Deploy Via Azure DevOps Pipeline",
+  "catalystTailwind": "Installing Tailwind CSS in Zoho Catalyst"
 }
