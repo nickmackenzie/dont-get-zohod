@@ -83,3 +83,6 @@ export const SignIcon = ({ style }) => {
 export const SitesIcon = ({ style }) => {
   return <IconBase style={{ ...style, backgroundPosition: "-600px 0" }} />;
 };
+export const ProjectsIcon = ({ style }) => {
+  return <IconBase style={{ ...style, backgroundPosition: "-520px -40px" }} />;
+};

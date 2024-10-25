@@ -16,6 +16,7 @@
   "creator": "Creator",
   "crm": "CRM",
   "desk": "Desk",
+  "projects": "Projects",
   "sites": "Sites",
   "-- Resources": {
     "type": "separator"
